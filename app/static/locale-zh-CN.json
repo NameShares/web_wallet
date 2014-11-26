@@ -150,7 +150,7 @@
         "create_wallet": "创建钱包"
     },
     "index": {
-        "title": "BitShares 钱包",
+        "title": "NameShares 钱包",
         "overview": "概况",
         "my_account": "我的账户",
         "directory": "目录",
@@ -363,7 +363,7 @@
     },
     "privacy": {
         "email_warning1": "你的邮件地址只会被用来识别",
-        "email_warning2": "绑定你BitShares 账户的地址，这可以帮助其他人来识别你的交易并且发送交易给正确的人.",
+        "email_warning2": "绑定你NameShares 账户的地址，这可以帮助其他人来识别你的交易并且发送交易给正确的人.",
         "email_warning3": "你的邮件地址不会被其他任何人知道，其他人也无法给你发送垃圾邮件."
     },
     "directory": {

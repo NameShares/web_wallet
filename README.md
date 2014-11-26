@@ -1,8 +1,8 @@
-# BitShares GUI (web wallet)
+# NameShares GUI (web wallet)
 
-This repository holds the BitShares graphical user interface, also
+This repository holds the NameShares graphical user interface, also
 known as the web wallet.  The web wallet is wrapped by the Qt client
-and released as part of the platform-specific BitShares binaries.
+and released as part of the platform-specific NameShares binaries.
 
 ## Hacking
 
@@ -12,7 +12,7 @@ To start hacking on the GUI, install Node.js and run these commands:
     $ npm start
 
 Start another shell, navigate to the web wallet directory, and start
-the BitShares client:
+the NameShares client:
 
     $ bitshares_client --server \
         --rpcuser=test --rpcpassword=test \

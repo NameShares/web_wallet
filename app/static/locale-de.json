@@ -140,8 +140,8 @@
     "unlock": {
         "btn_unlock": "Anmelden",
         "desc_title": "Handeln Sie weltweit BitAssets vertraulich, sicher und unverzüglich.",
-        "desc_content_1": "BitShares ist eine vollständig dezentrale Handelsplattform auf der Sie BitAssets aller Art handeln können. Zum Beispiel: BitGLD = XAU(Gold)",
-        "desc_content_2": "Weitere Informationen und Hilfe zu BitShares erhalten Sie unter http://bitsharestalk.org und http://wiki.bitshares.org",
+        "desc_content_1": "NameShares ist eine vollständig dezentrale Handelsplattform auf der Sie BitAssets aller Art handeln können. Zum Beispiel: BitGLD = XAU(Gold)",
+        "desc_content_2": "Weitere Informationen und Hilfe zu NameShares erhalten Sie unter http://bitsharestalk.org und http://wiki.bitshares.org",
         "wrong_pass": "Falsches Passwort."
     },
     "wallet": {
@@ -150,7 +150,7 @@
         "create_wallet": "Kontensammlung (Wallet) erstellen"
     },
     "index": {
-        "title": "BitShares Wallet",
+        "title": "NameShares Wallet",
         "overview": "Kontoauszug",
         "my_account": "Meine Konten",
         "directory": "Verzeichnis",

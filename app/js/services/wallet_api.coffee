@@ -671,7 +671,7 @@ class WalletAPI
     @rpc.request('wallet_sign_hash', [signing_account, hash], error_handler).then (response) ->
       response.result
 
-  # Initiates the login procedure by providing a BitShares Login URL
+  # Initiates the login procedure by providing a NameShares Login URL
   # parameters: 
   #   string `server_account` - Name of the account of the server. The user will be shown this name as the site he is logging into.
   # return_type: `string`
