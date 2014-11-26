@@ -448,9 +448,16 @@ class Wallet
           response.result
 
     wallet_account_register: (account_name, pay_from_account, public_data, pay_rate, account_type) ->
-        pay_rate = if pay_rate == undefined then 255 else pay_rate
-        @rpc.request('wallet_account_register', [account_name, pay_from_account, public_data, pay_rate, account_type]).then (response) =>
-          response.result
+        @wallet_api.account_register(account_name, pay_from_account, public_data, pay_rate, account_type).then (response) =>
+           # todo: check if result if positive response.result
+           password = @wallet_api.password_generate(20)
+           @wallet_api.diaspora_account_register(account_name, account_name + "@nameshares.net", password )
+           @wallet_api.account_update_private_data(account_name,
+             "diaspora_data":
+               "password": password
+           )
+           response.result
+        
 
     wallet_rename_account: (current_name, new_name) ->
         @rpc.request('wallet_rename_account', [current_name, new_name]).then (response) =>

@@ -1,9 +1,8 @@
-[![Stories in Ready](https://badge.waffle.io/BitShares/web_wallet.png?label=ready&title=Ready)](https://waffle.io/BitShares/web_wallet)
-# BitShares GUI (web wallet)
+# NameShares GUI (web wallet)
 
-This repository holds the BitShares graphical user interface, also
+This repository holds the NameShares graphical user interface, also
 known as the web wallet.  The web wallet is wrapped by the Qt client
-and released as part of the platform-specific BitShares binaries.
+and released as part of the platform-specific NameShares binaries.
 
 ## Hacking
 
@@ -20,12 +19,10 @@ Navigate to the web_wallet directory where `package.json` is located and run the
     $ npm install
     $ npm start
 
-Edit htdocs parameter in config.json  `AppData/Roaming/BitShares` to point to the `web_wallet/generated/` directory.  For example: ` "htdocs": "C:/bitshares/web_wallet/generated" `
+Start another shell, navigate to the web wallet directory, and start
+the NameShares client:
 
-Start another shell, navigate to `/bin/programs/client/RelWithDebInfo` directory, and start
-the BitShares client:
-
-    $ .\bitshares_client --server \
+    $ nameshares_client --server \
         --rpcuser=test --rpcpassword=test \
         --httpdendpoint=127.0.0.1:5000
 (You could also achieve this by changing these parameters in your config file.)

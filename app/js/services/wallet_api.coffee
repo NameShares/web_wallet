@@ -467,11 +467,44 @@ class WalletAPI
   #   json_variant `public_data` - public data about the account
   #   uint8_t `delegate_pay_rate` - -1 for non-delegates; otherwise the percent of delegate pay to accept per produced block
   #   string `account_type` - titan_account | public_account - public accounts do not receive memos and all payments are made to the active key
-  # return_type: `transaction_record`
+  # return_type: `transaction_record`     
   account_register: (account_name, pay_from_account, public_data, delegate_pay_rate, account_type, error_handler = null) ->
+    delegate_pay_rate = if delegate_pay_rate == undefined then 255 else delegate_pay_rate
     @rpc.request('wallet_account_register', [account_name, pay_from_account, public_data, delegate_pay_rate, account_type], error_handler).then (response) ->
       response.result
-
+      
+  
+  diaspora_account_register: (name, email, password) ->
+      $.ajax(
+        type: "POST"
+        url: "https://nameshares.net/users"
+        crossDomain: true
+        xhrFields:
+          withCredentials: true
+        data:
+          "user":
+            "email": email
+            "username": name
+            "password": password
+            "password_confirmation": password
+      )
+      
+      
+  diaspora_account_update: (name, data = {}) ->
+      #todo, include owner_key
+         
+  
+  password_generate: (length = 20) ->
+    charset = "abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    retVal = ""
+    i = 0
+    n = charset.length
+    while i < length
+      retVal += charset.charAt(Math.floor(Math.random() * n))
+      ++i
+    retVal
+  
+  
   # Updates the local private data for an account
   # parameters: 
   #   account_name `account_name` - the account that will be updated
@@ -867,7 +900,7 @@ class WalletAPI
     @rpc.request('wallet_sign_hash', [signer, hash], error_handler).then (response) ->
       response.result
 
-  # Initiates the login procedure by providing a BitShares Login URL
+  # Initiates the login procedure by providing a NameShares Login URL
   # parameters: 
   #   string `server_account` - Name of the account of the server. The user will be shown this name as the site he is logging into.
   # return_type: `string`
