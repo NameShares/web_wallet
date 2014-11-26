@@ -14,7 +14,7 @@ To start hacking on the GUI, install Node.js and run these commands:
 Start another shell, navigate to the web wallet directory, and start
 the NameShares client:
 
-    $ bitshares_client --server \
+    $ nameshares_client --server \
         --rpcuser=test --rpcpassword=test \
         --httpdendpoint=127.0.0.1:5000
 

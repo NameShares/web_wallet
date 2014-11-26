@@ -42,7 +42,7 @@
         "no_trxs": "Keine Transaktionen!",
         "updating_trx_history": "Aktualisiere Liste der Transaktionen ...",
         "partial_voting_info": "Dieses Konto hat verfügbare Stimmen. Nutzen Sie Ihr Recht und wählen Sie Ihre favorisierten Delegierten mit dem gesamten Kontostand.",
-        "client_update_available": "Eine neues zwingend Update ist verfügbar. Besuchen Sie bitte http://www.bitshares-x.info"
+        "client_update_available": "Eine neues zwingend Update ist verfügbar. Besuchen Sie bitte https://nameshares.net"
     },
     "th": {
         "date": "DATUM",
@@ -141,7 +141,7 @@
         "btn_unlock": "Anmelden",
         "desc_title": "Handeln Sie weltweit BitAssets vertraulich, sicher und unverzüglich.",
         "desc_content_1": "NameShares ist eine vollständig dezentrale Handelsplattform auf der Sie BitAssets aller Art handeln können. Zum Beispiel: BitGLD = XAU(Gold)",
-        "desc_content_2": "Weitere Informationen und Hilfe zu NameShares erhalten Sie unter http://bitsharestalk.org und http://wiki.bitshares.org",
+        "desc_content_2": "Weitere Informationen und Hilfe zu NameShares erhalten Sie unter http://bitsharestalk.org und https://nameshares.net",
         "wrong_pass": "Falsches Passwort."
     },
     "wallet": {
