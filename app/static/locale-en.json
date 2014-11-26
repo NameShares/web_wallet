@@ -156,6 +156,7 @@
         "directory": "Directory",
         "delegates": "Delegates",
         "market": "Market",
+        "spaces": "Spaces",        
         "block_explorer": "Block Explorer",
         "preferences": "Preferences",
         "console": "Console",
