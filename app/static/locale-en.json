@@ -139,8 +139,8 @@
     },
     "unlock": {
         "btn_unlock": "unlock",
-        "desc_title": "the future of banking",
-        "desc_content_1": "NameShares is a global community using a distributed application to produce the best money in the world.",
+        "desc_title": "Decentralized Automated Domain Name Service",
+        "desc_content_1": "https://nameshares.net",
         "desc_content_2": "",
         "wrong_pass": "Wrong Password."
     },
@@ -152,7 +152,7 @@
     "index": {
         "title": "NameShares",
         "overview": "Overview",
-        "my_account": "My Accounts",
+        "my_account": "Accounts",
         "directory": "Directory",
         "delegates": "Delegates",
         "market": "Market",

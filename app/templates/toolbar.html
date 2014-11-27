@@ -1,13 +1,23 @@
+<!--
 <div class="nav navbar-nav logo-panel">
     <ul>
       <li class="back-button"><a class="pointer back-button" ng-click="back()" tooltip="Back" tooltip-placement="bottom"> &nbsp; <i class="fa fa-chevron-left"></i> &nbsp; </a></li>
       <li class="back-button"><a class="pointer" ng-click="forward()" tooltip="Forward" tooltip-placement="bottom"> &nbsp; <i class="fa fa-chevron-right"></i> &nbsp; </a></li>
     </ul>
 </div>
-
+-->
 <ul class="nav navbar-nav left-panel">
-   <li ng-class="{active: current_path_includes('transfer')}"><a ui-sref="transfer"><i class="fa fa-sign-out fa-fw fa-lg"></i>{{ 'account.transfer' | translate }}</a></li>
-   <li ng-class="{active: current_path_includes('newcontact')}"><a ui-sref="newcontact"><i class="fa fa-plus fa-fw fa-lg"></i>{{ 'contact.add_contact' | translate }}</a></li>
+   <!--<li ng-class="{active: current_path_includes('transfer')}"><a ui-sref="transfer"><i class="fa fa-sign-out fa-fw fa-lg"></i>{{ 'account.transfer' | translate }}</a></li>
+   <li ng-class="{active: current_path_includes('newcontact')}"><a ui-sref="newcontact"><i class="fa fa-plus fa-fw fa-lg"></i>{{ 'contact.add_contact' | translate }}</a></li>-->
+   <li class="back-button"><a class="pointer back-button" ng-click="back()" tooltip="Back" tooltip-placement="bottom"> &nbsp; <i class="fa fa-chevron-left"></i> &nbsp; </a></li>
+   <li class="back-button"><a class="pointer" ng-click="forward()" tooltip="Forward" tooltip-placement="bottom"> &nbsp; <i class="fa fa-chevron-right"></i> &nbsp; </a></li>
+   <li ng-class="{active: current_path_includes('account')}"><a ui-sref="accounts"><i class="fa fa-book fa-fw"></i>{{ 'index.my_account' | translate }}</a></li>
+   <li ng-class="{active: current_path_includes('space')}" style="opacity: .5; pointer-events: none" ><a ui-sref="spaces"><i class="fa fa-star fa-fw"></i>{{ 'index.spaces' | translate }}</a></li>
+   <li ui-sref-active="active"><a ui-sref="delegates"><i class="fa fa-flag fa-fw"></i>{{ 'index.delegates' | translate }}</a></li>                       
+   <li ng-class="{active: current_path_includes('blocks')}"><a ui-sref="blocks"><i class="fa fa-link fa-fw"></i>{{ 'index.block_explorer' | translate }}</a></li>
+   <li ui-sref-active="active"><a ui-sref="preferences"><i class="fa fa-gears fa-fw"></i>{{ 'index.preferences' | translate }}</a></li>
+   <li ui-sref-active="active"><a ui-sref="console"><i class="fa fa-terminal fa-fw"></i>{{ 'index.console' | translate }}</a></li>
+   <li ui-sref-active="active"><a ui-sref="help"><i class="fa fa-question-circle fa-fw"></i>{{ 'index.help' | translate }}</a></li>         
 </ul>
 
 <ul class="nav navbar-nav pull-right">
@@ -27,8 +37,9 @@
     </ul>
   </li>
 
+
   <li class="lock"><a ng-click="lock()" href><i class="fa fa-lock fa-fw"></i>{{ 'index.lock' | translate }}</a></li>
   <li ng-show="context_help.show" class="context-help">
-    <a ng-click="open_context_help()">{{'help.title'|translate}}<i class="fa fa-angle-double-left fa-fw"/></a>
+    <a ng-click="open_context_help()">{{'help.title'|translate}}<i class="fa fa-angle-double-left fa-fw"></i>/></a>
   </li>
 </ul>

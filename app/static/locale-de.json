@@ -139,9 +139,9 @@
     },
     "unlock": {
         "btn_unlock": "Anmelden",
-        "desc_title": "Handeln Sie weltweit BitAssets vertraulich, sicher und unverzüglich.",
-        "desc_content_1": "NameShares ist eine vollständig dezentrale Handelsplattform auf der Sie BitAssets aller Art handeln können. Zum Beispiel: BitGLD = XAU(Gold)",
-        "desc_content_2": "Weitere Informationen und Hilfe zu NameShares erhalten Sie unter http://bitsharestalk.org und https://nameshares.net",
+        "desc_title": "Dezentrale Automatisierte Domain Name Service",
+        "desc_content_1": "https://nameshares.net",
+        "desc_content_2": "",
         "wrong_pass": "Falsches Passwort."
     },
     "wallet": {
