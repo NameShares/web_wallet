@@ -11,16 +11,22 @@
    <li ng-class="{active: current_path_includes('newcontact')}"><a ui-sref="newcontact"><i class="fa fa-plus fa-fw fa-lg"></i>{{ 'contact.add_contact' | translate }}</a></li>-->
    <li class="back-button"><a class="pointer back-button" ng-click="back()" tooltip="Back" tooltip-placement="bottom"> &nbsp; <i class="fa fa-chevron-left"></i> &nbsp; </a></li>
    <li class="back-button"><a class="pointer" ng-click="forward()" tooltip="Forward" tooltip-placement="bottom"> &nbsp; <i class="fa fa-chevron-right"></i> &nbsp; </a></li>
-   <li ng-class="{active: current_path_includes('account')}"><a ui-sref="accounts"><i class="fa fa-book fa-fw"></i>{{ 'index.my_account' | translate }}</a></li>
+   <li ng-class="{active: current_path_includes('account')}"><a ui-sref="accounts"><i class="fa fa-user fa-fw"></i>{{ 'index.my_account' | translate }}</a></li>
    <li ng-class="{active: current_path_includes('space')}" style="opacity: .5; pointer-events: none" ><a ui-sref="spaces"><i class="fa fa-star fa-fw"></i>{{ 'index.spaces' | translate }}</a></li>
+   <li ng-class="{active: current_path_includes('directory')}"><a ui-sref="directory.favorites"><i class="fa fa-book fa-fw"></i>{{ 'index.directory' | translate }}</a></li>
    <li ui-sref-active="active"><a ui-sref="delegates"><i class="fa fa-flag fa-fw"></i>{{ 'index.delegates' | translate }}</a></li>                       
    <li ng-class="{active: current_path_includes('blocks')}"><a ui-sref="blocks"><i class="fa fa-link fa-fw"></i>{{ 'index.block_explorer' | translate }}</a></li>
-   <li ui-sref-active="active"><a ui-sref="preferences"><i class="fa fa-gears fa-fw"></i>{{ 'index.preferences' | translate }}</a></li>
-   <li ui-sref-active="active"><a ui-sref="console"><i class="fa fa-terminal fa-fw"></i>{{ 'index.console' | translate }}</a></li>
-   <li ui-sref-active="active"><a ui-sref="help"><i class="fa fa-question-circle fa-fw"></i>{{ 'index.help' | translate }}</a></li>         
+   
+   <!--
+   <li ng-class="{active: current_path_includes('network')}"><a ui-sref="network"><i class="fa fa-cloud fa-fw"></i>{{ 'index.network' | translate }}</a></li>
+   -->         
 </ul>
 
 <ul class="nav navbar-nav pull-right">
+   <li ui-sref-active="active"><a ui-sref="preferences"><i class="fa fa-gears fa-fw"></i>{{ 'index.preferences' | translate }}</a></li>
+   <li ui-sref-active="active"><a ui-sref="console"><i class="fa fa-terminal fa-fw"></i>{{ 'index.console' | translate }}</a></li>
+   <li ui-sref-active="active"><a ui-sref="help"><i class="fa fa-question-circle fa-fw"></i>{{ 'index.help' | translate }}</a></li>
+
   <li class="dropdown notification error-notifications" ng-show="errors.list.length > 0" ng-class="{'new-error': errors.new_error}" on-toggle="error_notifier_toggled(open)">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
       <span class="label label-danger arrowed arrow-left-in pull-right">{{errors.num_errors}}</span> <i class="fa fa-bell"></i>
