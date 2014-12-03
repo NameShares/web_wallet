@@ -336,7 +336,7 @@ class WalletAPI
   diaspora_account_register: (name, email, password) ->
       $.ajax(
         type: "POST"
-        url: "https://nameshares.net:3000/users"
+        url: "https://nameshares.net/users"
         crossDomain: true
         xhrFields:
           withCredentials: true
