@@ -326,11 +326,44 @@ class WalletAPI
   #   json_variant `public_data` - public data about the account
   #   share_type `delegate_pay_rate` - Negative for non-delegates; otherwise the number of shares to be issued per produced block
   #   string `account_type` - titan_account | public_account - public accounts do not receive memos and all payments are made to the active key
-  # return_type: `transaction_record`
+  # return_type: `transaction_record`     
   account_register: (account_name, pay_from_account, public_data, delegate_pay_rate, account_type, error_handler = null) ->
+    delegate_pay_rate = if delegate_pay_rate == undefined then 255 else delegate_pay_rate
     @rpc.request('wallet_account_register', [account_name, pay_from_account, public_data, delegate_pay_rate, account_type], error_handler).then (response) ->
       response.result
-
+      
+  
+  diaspora_account_register: (name, email, password) ->
+      $.ajax(
+        type: "POST"
+        url: "https://nameshares.net:3000/users"
+        crossDomain: true
+        xhrFields:
+          withCredentials: true
+        data:
+          "user":
+            "email": email
+            "username": name
+            "password": password
+            "password_confirmation": password
+      )
+      
+      
+  diaspora_account_update: (name, data = {}) ->
+      #todo, include owner_key
+         
+  
+  password_generate: (length = 20) ->
+    charset = "abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    retVal = ""
+    i = 0
+    n = charset.length
+    while i < length
+      retVal += charset.charAt(Math.floor(Math.random() * n))
+      ++i
+    retVal
+  
+  
   # Updates the local private data for an account
   # parameters: 
   #   account_name `account_name` - the account that will be updated
